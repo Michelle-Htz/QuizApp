@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizApp</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.min.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizApp</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <script src="script.js"></script>
 </head>
-<body>
+
+<body onload="init()">
 
 
-    <div>Siehst du das ?</div>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+  <div class="header">
+    <span>Die etwas andere App</span>
+  </div>
+  <div class="card">
+    <img src="img/quiz.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="question-text">Hier kommt die Frage</h5>
+      <div class="answer-container">
+        <button class="answer-btn" id="answer_1" onclick="answer('answer_1')"> A</button>
+        <button class="answer-btn" id="answer_2" onclick="answer('answer_2')"> B</button>
+        <button class="answer-btn" id="answer_3" onclick="answer('answer_3')"> C</button>
+        <button class="answer-btn" id="answer_4" onclick="answer('answer_4')"> D</button>
       </div>
+      <div class="next-btn-container">
+        <span>Frage <b>1</b> von <b id="question-number">5</b> </span>
+        <a href="#" class="next-btn">-></a>
+      </div>
+
+
+    </div>
+  </div>
 </body>
+
 </html>
